@@ -21,6 +21,15 @@ export const Users: CollectionConfig = {
       name: 'name',
       type: 'text',
     },
+    {
+      name: 'role',
+      type: 'select', 
+      defaultValue: 'buyer',
+      options: [
+        'buyer', 'seller'
+      ]
+    },
+
   ],
   timestamps: true,
 }

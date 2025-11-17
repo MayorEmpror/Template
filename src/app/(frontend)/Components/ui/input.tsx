@@ -1,6 +1,13 @@
+// Input component extends from shadcnui - https://ui.shadcn.com/docs/components/input
 "use client";
 import * as React from "react";
-import { cn } from "@/utilities/ui";
+import { ClassValue, clsx } from "clsx";
+import { twMerge } from "tailwind-merge";
+ 
+export function cn(...inputs: ClassValue[]) {
+  return twMerge(clsx(inputs));
+}
+
 import { useMotionTemplate, useMotionValue, motion } from "motion/react";
 
 export interface InputProps
